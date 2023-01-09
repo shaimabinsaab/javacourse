@@ -1,0 +1,100 @@
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        //first example
+        Scanner sh= new Scanner(System.in);
+        System.out.println("please enter your first number:");
+        int nume1 = sh.nextInt();
+        System.out.println("please enter your second number:");
+        int nume2 = sh.nextInt();
+        System.out.println(nume1+"+"+nume2+":"+nume1+nume2);
+        System.out.println(nume1+"+"+nume2+":"+(nume1-nume2));
+       System.out.println(nume1+"x"+nume2+":"+nume1*nume2);
+        System.out.println(nume1+"/"+nume2+":"+nume1/nume2);
+        System.out.println(nume1+"mod"+nume2+":"+nume1%nume2);
+
+
+        //second example
+        System.out.println("enter text:");
+        String conv= sh.nextLine();
+        System.out.println(conv.toLowerCase());
+
+        //third example
+        System.out.println("Input a number:");
+        int num = sh.nextInt();
+        if(num % 2==0){
+            System.out.println("1");
+
+        }else System.out.println("0");
+
+        //fourth number
+        System.out.println("enter your role");
+        String role= sh.nextLine();
+
+        if(role.contains("superuser")){
+            System.out.println("welcome superuser");
+        }else if(role.contains("admin")) {
+            System.out.print("welcome admin");
+        }else if(role.contains("user")){
+            System.out.print("welcome user");
+
+        }
+
+        //fifth
+        System.out.println("please enter your first number:");
+        int first = sh.nextInt();
+        System.out.println("please enter your second number:");
+        int second = sh.nextInt();
+        System.out.println("please enter your third number:");
+        int third = sh.nextInt();
+        int sum=first+second;
+
+        if(third==sum){
+            System.out.println("true");
+        }else System.out.println("false");
+
+        //sixth
+        System.out.println("please enter your first number:");
+        int first1 = sh.nextInt();
+        System.out.println("please enter your second number:");
+        int second2 = sh.nextInt();
+        System.out.println("please enter your third number:");
+        int third3 = sh.nextInt();
+
+        if(first1>second2 && first1>third3){
+            System.out.println("the greatest:"+first1);
+        } else if (second2 > first1 && second2 > third3) {
+            System.out.println("the greatest:"+second2);
+        } else if (third3 > first1 && third3 > second2) {
+            System.out.println("the greatest:"+third3);
+        }
+
+        //seventh
+        System.out.println("please enter number from 1 to 7");
+        int yournumber = sh.nextInt();
+
+        switch (yournumber){
+        case 1 : System.out.println("sunday");
+            break;
+        case 2 :System.out.println("monday");
+            break;
+        case 3 :System.out.println("tuesday");
+            break;
+        case 4 : System.out.println("wednesday");
+                break;
+        case 5 : System.out.println("thursday");
+                break;
+        case 6 : System.out.println("friday");
+                break;
+        case 7 : System.out.println("saturday");
+                break;
+        }
+
+
+
+
+    }
+
+}
