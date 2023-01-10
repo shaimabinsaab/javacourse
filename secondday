@@ -1,0 +1,165 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+
+
+        //first example
+        for (int i = 1; i <= 100; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.println("FizzBuzz");
+
+            } else if (i % 3 == 0) {
+                System.out.println("Fizz");
+
+
+            } else if (i % 5 == 0) {
+                System.out.println("Buzz");
+
+            }
+
+        }
+
+        //second example
+        System.out.println("please enter text");
+        String name=s.nextLine();
+        int strLength = name.length();
+        String reverseStr ="";
+
+        for (int i = (strLength - 1); i >=0; --i) {
+            reverseStr = reverseStr + name.charAt(i);}
+        System.out.println(reverseStr);
+
+
+        //third example
+
+        System.out.println("enter positive value");
+        int val=s.nextInt();
+
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(val+"*"+i+"="+val*i);
+
+        }
+
+        //forth example
+        System.out.println("enter  value");
+        int val2=s.nextInt();
+        int fec=1;
+        while(val2 != 0) {
+            fec =fec*val2;
+            val2--;
+        }
+        System.out.println(fec);
+
+        //fifth example
+        System.out.println("enter  the base");
+        int base=s.nextInt();
+        System.out.println("enter  the power");
+        int power=s.nextInt();
+        int result=1;
+        while(power != 0) {
+            result =result*base;
+            power--;
+        }
+        System.out.println("result: "+result);
+
+        //sixth example
+        System.out.println("enter number or -1 to exit");
+        int n=s.nextInt();
+        int even=0;
+        int odd=0;
+        while(n!=-1)
+        {
+            if(n%2==0){
+            even+=n;
+            }
+            else{
+                odd+=n;
+            }
+            System.out.println("enter number or -1 to exit");
+            n=s.nextInt();
+
+        }
+        System.out.println("the sum of odd number: "+odd+"\nthe sum of even number: "+even);
+//
+//        //seventh example
+        System.out.println("enter number to check if prime or not");
+        int m=s.nextInt();
+        for (int i = 2; i <m/2 ; i++) {
+            if(m<=1){
+                System.out.println("your number is not prime");
+                break;
+
+        }
+            if((m%i)==0){
+                System.out.println("your number is not prime");
+                break;
+
+
+            }
+            System.out.println("your number is prime");
+
+        }
+
+//        //eighth example
+        System.out.println("enter number or -1 to exit");
+        int sh=s.nextInt();
+        int ceven=0;
+        int codd=0;
+        int czeros=0;
+        while(sh!=-1)
+        {
+            if(sh%2==0){
+                ceven++;
+            }
+            else if(sh%2==1){
+                codd++;
+            } else if (sh==0) {
+                czeros++;
+            }
+            System.out.println("enter number or -1 to exit");
+            sh=s.nextInt();
+
+        }
+        System.out.println("the number of odd number: "+codd+"\nthe number of even number: "+ceven+
+                "\nthe number of zeros: "+czeros);
+//
+////        //nine example
+        for (int i = 1; i <= 4; i++) {
+            System.out.println("week" + i);
+            for (int j = 1; j <= 7; j++) {
+                System.out.println("day" + j);
+
+            }
+
+
+        }
+
+        //tenth example
+        System.out.println("please enter text");
+        String polname=s.nextLine();
+
+        int rev = polname.length();
+        String revers="";
+
+        for (int i = (rev - 1); i >=0; --i) {
+            revers = revers + polname.charAt(i);
+        }
+
+        if (polname.toLowerCase().equals(revers.toLowerCase())) {
+            System.out.println(polname + " is a Palindrome String.");
+        }
+        else {
+            System.out.println(polname + " is not a Palindrome String.");
+        }
+
+
+    }}
+
+
+
+
+
+
