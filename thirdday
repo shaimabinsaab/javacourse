@@ -1,0 +1,152 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Scanner;
+
+import static java.util.Arrays.sort;
+
+public class Main {
+    public static void main(String[] args) {
+        //1.example
+        int[] num={2,3,4,5,6};
+        int check= num.length-1;
+        if(num[0]!=num[check]){
+            System.out.println("false");}
+        else{
+            System.out.println("true");
+        }
+
+        //2.example
+        Integer arr[] = new Integer[]{1, 4, 17, 7, 25, 3, 100};
+        int k = 3;
+		System.out.println("Original Array: ");
+		System.out.println(Arrays.toString(arr));
+		System.out.println(k +" largest elements of the said array are:");
+        Arrays.sort(arr, Collections.reverseOrder());
+       for (int i = 0; i < k; i++)
+          System.out.print(arr[i] + " ");
+
+        //3.example
+        Integer s[]=new Integer[]{2,3,6,7,8,0};
+        int[] nm=new int[s.length];
+        int sum=0;
+        for (int i = 0; i < s.length; i++) {
+            sum=sum+s[i];
+        }
+        int length = s.length;
+        int avg=sum/length;
+
+        for (int i = 0; i < s.length; i++) {
+            if(s[i]>avg){
+                nm [i]=s[i];
+            }
+
+
+        }
+        System.out.println("the averge is"+avg);
+        System.out.println(Arrays.toString(nm));
+
+        //4.example#
+        int[] array_nums = {20, 30, 40};
+        System.out.println("Original Array: "+Arrays.toString(array_nums));
+        int max_val = array_nums[0];
+        if(array_nums[2] >= max_val)
+            max_val = array_nums[2];
+        System.out.println("Larger value between first and last element: "+max_val);
+        
+        //5.example
+        int[] var={2,33,5,7,6};
+        int temp=0;
+        temp=var[0];
+        var[0]=var[var.length-1];
+        var[var.length-1]=temp;
+        System.out.println("the arry after swapping"+ Arrays.toString(var));
+
+        //6.example
+        ArrayList<String> lon = new ArrayList<String>();
+        String [] d = {"cat", "dog", "red", "is", "am"};
+        int longest_length = 0;
+        for (String str : d) {
+            int length1 = str.length();
+            if (length1 > longest_length) {
+                longest_length = length1;
+                lon.clear();
+            }
+            if (length1 == longest_length) {
+                lon.add(str);
+            }
+        }
+        System.out.println(lon.toString());
+
+        //7.example
+        Scanner sc =new Scanner(System.in);
+        System.out.println("enter the size of your array");
+        int arrsize=sc.nextInt();
+        int[]array=new int[arrsize];
+        System.out.println("enter the element ");
+        for (int i = 0; i < array.length; i++) {
+            array[i]=sc.nextInt();
+
+        }
+        System.out.println("your array "+Arrays.toString(array));
+        System.out.println("enter the element that you want to find within the array");
+        int search=sc.nextInt();
+        for (int i = 0; i < array.length ; i++) {
+            if(array[i]==search)
+                System.out.println("it is here: "+search+" with index number: "+i);
+        }
+        Arrays.sort(array);
+        System.out.print("your array sorted: "+Arrays.toString(array));
+
+
+        //8.example
+        Scanner q=new Scanner(System.in);
+        int[] con={2,33,5,7,6};
+        System.out.println("enter number");
+        int enter= q.nextInt();
+        int counter=0;
+
+        for (int i = 0; i < con.length; i++) {
+            if(con[i]==enter)
+                counter++;
+
+        }
+        System.out.println(enter +" occure "+ counter +" tims");
+
+        //9.example
+        int[] sw={2,33,5,7,6};
+        int j = -1;
+        int tempe;
+
+        for (int i = 0; i < sw.length; i++) {
+            if (sw[i] % 2 == 1) {
+                j++;
+                tempe = sw[i];
+                sw[i] = sw[j];
+                sw[j] = tempe;
+            }
+        }
+        System.out.println(Arrays.toString(sw));
+
+        //10.example
+        int[] de={2,33,5,7,6};
+        int[] g={2,33,5,7,6};
+        System.out.println(Arrays.equals(de,g));
+
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
